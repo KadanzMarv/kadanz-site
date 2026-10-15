@@ -1,60 +1,317 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kadanz — outils et services pour des problèmes opérationnels concrets</title>
-<meta name="description" content="Kadanz conçoit des outils et services simples pour résoudre des problèmes opérationnels concrets. Actuellement : le pré-diagnostic Qualiopi V10 des indicateurs de résultats.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kadanz — Les marchés qui méritent votre attention</title>
+<meta name="description" content="Kadanz repère les marchés publics qui correspondent réellement à votre activité, votre métier et votre zone d'intervention.">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#174C46">
+<meta property="og:title" content="Kadanz — Les marchés qui méritent votre attention">
+<meta property="og:description" content="Kadanz repère les marchés publics qui correspondent réellement à votre activité, votre métier et votre zone d'intervention.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:url" content="https://kadanz.fr/">
+<link rel="canonical" href="https://kadanz.fr/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
-  :root { --ink:#1b1f24; --muted:#5a6470; --line:#e3e6ea; --accent:#1f5fbf; --bg:#fbfbfa; }
-  * { box-sizing:border-box; }
-  body { margin:0; font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color:var(--ink); background:var(--bg); }
-  main { max-width:720px; margin:0 auto; padding:56px 22px 72px; }
-  .brand { font-weight:800; letter-spacing:.14em; font-size:.95rem; margin-bottom:40px; }
-  h1 { font-size:1.75rem; line-height:1.3; margin:0 0 40px; font-weight:650; }
-  .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:24px 26px; }
-  .tag { font-size:.8rem; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin:0 0 6px; }
-  h2 { font-size:1.3rem; margin:0 0 12px; }
-  p { margin:0 0 14px; }
-  ul { padding-left:20px; margin:0 0 18px; } li { margin:4px 0; }
-  .cta { display:inline-block; background:var(--accent); color:#fff; text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; }
-  .contact { margin-top:44px; }
-  .contact h3 { font-size:1rem; margin:0 0 6px; }
-  a { color:var(--accent); }
-  footer { border-top:1px solid var(--line); margin-top:56px; padding-top:18px; font-size:.85rem; color:var(--muted); }
+:root{
+  --vert:#174C46;
+  --vert2:#39786C;
+  --anthracite:#17211F;
+  --creme:#F7F7F3;
+  --gris:#6B7471;
+  --ligne:#DFDED6;
+  --ligne-fine:#EAE9E2;
+  --blanc:#FFFEFB;
+  --serif:"Instrument Serif",Georgia,"Times New Roman",serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  margin:0;background:var(--creme);color:var(--anthracite);
+  font:400 17px/1.7 var(--sans);-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+.wrap{max-width:760px;margin:0 auto;padding:0 28px}
+@media(max-width:560px){.wrap{padding:0 20px}}
+
+a{color:var(--vert);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{color:var(--vert2)}
+
+/* ── en-tête ─────────────────────────────────────────── */
+.bandeau{padding:30px 0 0}
+.logo{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+.logo svg{display:block}
+.logo .mot{font:600 15px/1 var(--sans);letter-spacing:.26em;color:var(--anthracite)}
+
+/* ── hero ────────────────────────────────────────────── */
+.hero{padding:76px 0 68px}
+@media(max-width:560px){.hero{padding:52px 0 44px}}
+.surtitre{
+  font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--vert2);margin:0 0 26px;
+}
+h1{
+  font:400 clamp(2.3rem,7.2vw,3.9rem)/1.06 var(--serif);
+  letter-spacing:-.015em;margin:0 0 .5em;color:var(--anthracite);
+}
+.chapeau{
+  font-size:1.15rem;line-height:1.62;color:var(--gris);
+  margin:0 0 1.5rem;max-width:34em;
+}
+.appui{
+  font-size:1.03rem;line-height:1.6;color:var(--anthracite);
+  margin:0 0 2.4rem;max-width:30em;
+}
+.appui strong{font-weight:600}
+.lien-fort{
+  display:inline-block;font:600 .97rem/1 var(--sans);color:var(--vert);
+  text-decoration:none;border-bottom:1.5px solid var(--vert);padding-bottom:5px;
+}
+.lien-fort:hover{color:var(--vert2);border-color:var(--vert2)}
+.hero-note{font-size:.88rem;color:var(--gris);margin:1.35rem 0 0}
+
+/* ── rythme des sections ─────────────────────────────── */
+section{padding:62px 0;border-top:1px solid var(--ligne)}
+@media(max-width:560px){section{padding:46px 0}}
+.etiquette{
+  font:600 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;
+  color:var(--vert2);margin:0 0 22px;
+}
+h2{
+  font:400 clamp(1.6rem,4.2vw,2.15rem)/1.18 var(--serif);
+  letter-spacing:-.01em;margin:0 0 1.1rem;
+}
+section > p{max-width:36em;color:var(--gris);margin:0 0 1rem}
+
+/* ── étapes : liste éditoriale, pas des cartes ───────── */
+.etapes{margin:34px 0 0;padding:0;list-style:none;counter-reset:e}
+.etapes li{
+  counter-increment:e;display:grid;grid-template-columns:62px 1fr;gap:0 22px;
+  padding:26px 0;border-top:1px solid var(--ligne-fine);
+}
+.etapes li:first-child{border-top:none;padding-top:6px}
+.etapes li::before{
+  content:counter(e,decimal-leading-zero);
+  font:400 1.75rem/1 var(--serif);color:var(--vert);opacity:.5;padding-top:2px;
+}
+.etapes h3{font:600 1.02rem/1.4 var(--sans);margin:0 0 .3em;letter-spacing:.01em}
+.etapes p{margin:0;color:var(--gris);font-size:.98rem;max-width:34em}
+@media(max-width:560px){
+  .etapes li{grid-template-columns:44px 1fr;gap:0 14px;padding:20px 0}
+  .etapes li::before{font-size:1.4rem}
+}
+
+/* ── fiche d'opportunité ─────────────────────────────── */
+.fiche{
+  background:var(--blanc);border:1px solid var(--ligne);
+  border-left:2px solid var(--vert);margin:30px 0 0;
+}
+.fiche-tete{
+  padding:20px 26px 16px;border-bottom:1px solid var(--ligne-fine);
+}
+.fiche-tag{
+  font:600 10px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;
+  color:var(--vert2);display:block;margin:0 0 9px;
+}
+.fiche-tete h3{
+  font:400 1.18rem/1.38 var(--serif);margin:0;color:var(--anthracite);
+}
+.fiche dl{margin:0;padding:4px 26px 20px}
+.fiche .ligne{
+  display:grid;grid-template-columns:138px 1fr;gap:0 20px;
+  padding:11px 0;border-bottom:1px solid var(--ligne-fine);
+}
+.fiche .ligne:last-of-type{border-bottom:none}
+.fiche dt{
+  font:600 10.5px/1.5 var(--sans);letter-spacing:.13em;text-transform:uppercase;
+  color:var(--gris);padding-top:3px;
+}
+.fiche dd{margin:0;font-size:.97rem;color:var(--anthracite)}
+.fiche dd .sec{color:var(--gris);font-size:.9rem}
+@media(max-width:560px){
+  .fiche-tete,.fiche dl{padding-left:18px;padding-right:18px}
+  .fiche .ligne{grid-template-columns:1fr;gap:2px;padding:10px 0}
+}
+.fiche-pied{
+  padding:16px 26px 20px;border-top:1px solid var(--ligne-fine);
+  background:#FBFAF6;font-size:.88rem;color:var(--gris);
+}
+.fiche-pied p{margin:0}
+@media(max-width:560px){.fiche-pied{padding-left:18px;padding-right:18px}}
+
+/* ── portrait ────────────────────────────────────────── */
+.portrait{border-left:2px solid var(--vert);padding:2px 0 2px 26px;margin:28px 0 0}
+.portrait p{margin:0 0 1.05em;max-width:35em}
+.portrait p:last-child{margin-bottom:0}
+.portrait .nom{font:400 1.5rem/1.25 var(--serif);color:var(--anthracite);margin-bottom:.7em}
+@media(max-width:560px){.portrait{padding-left:18px}}
+
+/* ── contact ─────────────────────────────────────────── */
+.contact-bloc{margin:26px 0 0;font-size:1.02rem;line-height:1.95}
+.contact-bloc .nom{font-weight:600}
+.contact-bloc .marque{letter-spacing:.2em;font-size:.84rem;font-weight:600;color:var(--vert)}
+.contact-bloc .role{color:var(--gris);font-size:.95rem}
+
+/* ── pied ────────────────────────────────────────────── */
+footer{border-top:1px solid var(--ligne);padding:40px 0 64px;font-size:.88rem;color:var(--gris)}
+footer p{margin:0 0 .9em;max-width:44em}
+footer p:last-child{margin-bottom:0}
+footer strong{color:var(--anthracite);font-weight:600}
 </style>
 </head>
 <body>
-<main>
-  <div class="brand">KADANZ</div>
-  <h1>Des outils et services simples pour résoudre des problèmes opérationnels concrets.</h1>
 
-  <section class="card">
-    <p class="tag">Actuellement proposé</p>
-    <h2>Pré-diagnostic Qualiopi V10 — indicateurs de résultats</h2>
-    <p>Le référentiel Qualiopi modifié par le décret n° 2026-728 s'applique aux audits à partir du
-    1<sup>er</sup> novembre 2026. La V10 impose désormais de préciser de manière transparente les modalités
-    de calcul des indicateurs de résultats publiés.</p>
-    <ul>
-      <li><strong>Pré-diagnostic gratuit</strong> : une page personnalisée, établie uniquement à partir des informations
-        publiques de l'organisme de formation.</li>
-      <li><strong>Prestation complète au forfait</strong> : à partir de ses données réelles, le tableau complet des
-        indicateurs, leurs modalités de calcul et les éléments prêts à publier.</li>
-    </ul>
-    <a class="cta" href="https://prediag.kadanz.fr">Voir le pré-diagnostic V10</a>
-  </section>
+<div class="wrap">
+  <header class="bandeau">
+    <a class="logo" href="/" aria-label="Kadanz — accueil">
+      <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+        <rect width="64" height="64" rx="8" fill="#174C46"/>
+        <g fill="none" stroke="#F7F7F3" stroke-width="5.5" stroke-linecap="square">
+          <path d="M23 18 V46"/><path d="M43 18 L27 32"/><path d="M27 32 L44 46"/>
+        </g>
+      </svg>
+      <span class="mot">KADANZ</span>
+    </a>
+  </header>
 
-  <section class="contact">
-    <h3>Contact</h3>
-    <p>Marvyn Gommard<br><a href="mailto:marvyn@kadanz.fr">marvyn@kadanz.fr</a></p>
-  </section>
+  <div class="hero">
+    <p class="surtitre">Veille de marchés publics</p>
+    <h1>Les marchés qui méritent votre attention.</h1>
+    <p class="chapeau">Kadanz repère les marchés publics qui correspondent réellement à votre
+      activité, votre métier et votre zone d'intervention.</p>
+    <p class="appui">Vous ne passez plus votre temps à chercher.<br>
+      <strong>Vous décidez simplement lesquels valent votre attention.</strong></p>
+    <a class="lien-fort" href="mailto:marvyn@kadanz.fr?subject=Kadanz%20%E2%80%94%20veille%20de%20march%C3%A9s%20publics&amp;body=Bonjour%2C%0A%0AMon%20entreprise%20%3A%20%0AMon%20m%C3%A9tier%20%3A%20%0AMes%20zones%20d%27intervention%20%3A%20%0A%0A">Nous contacter</a>
+    <p class="hero-note">Un e-mail suffit. Aucun compte à créer.</p>
+  </div>
+</div>
 
-  <footer>
-    Éditeur : Marvyn Gommard — <a href="mailto:marvyn@kadanz.fr">marvyn@kadanz.fr</a>.
-    Hébergement : GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.
-    Ce site ne dépose aucun cookie et n'utilise aucun outil de mesure d'audience.
-    Kadanz n'est ni organisme certificateur ni auditeur Qualiopi.
-  </footer>
-</main>
+<section>
+  <div class="wrap">
+    <p class="etiquette">Comment ça fonctionne</p>
+    <h2>Trois étapes, et rien à installer.</h2>
+    <ol class="etapes">
+      <li>
+        <div>
+          <h3>Surveiller</h3>
+          <p>Les avis de marchés publics paraissent chaque jour au BOAMP, le bulletin officiel.
+            Plusieurs milliers sont ouverts en permanence. Kadanz les suit en continu.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Filtrer</h3>
+          <p>L'immense majorité ne vous concerne pas : autre métier, autre région, autre nature
+            de prestation, ou délai déjà trop court. Kadanz écarte ce bruit.</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <h3>Vous signaler</h3>
+          <p>Vous ne recevez que les opportunités qui semblent réellement correspondre à votre
+            activité, avec ce qu'il faut pour trancher en quelques minutes.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="etiquette">Exemple</p>
+    <h2>À quoi ressemble une opportunité signalée.</h2>
+    <p>Voici un marché réellement publié, relevé au BOAMP, tel que Kadanz le présente.</p>
+
+    <article class="fiche">
+      <div class="fiche-tete">
+        <span class="fiche-tag">Avis réel · relevé le 15 octobre 2026</span>
+        <h3>Entretien des espaces verts urbains de Bouchemaine</h3>
+      </div>
+      <dl>
+        <div class="ligne"><dt>Acheteur</dt><dd>Commune de Bouchemaine</dd></div>
+        <div class="ligne"><dt>Localisation</dt><dd>Maine-et-Loire (49)</dd></div>
+        <div class="ligne"><dt>Date limite</dt><dd>30 octobre 2026</dd></div>
+        <div class="ligne"><dt>Référence</dt><dd>BOAMP 26-90067</dd></div>
+        <div class="ligne"><dt>Nature</dt><dd>Services — entretien d'espaces verts<br>
+          <span class="sec">Correspond aux entreprises d'aménagement paysager</span></dd></div>
+        <div class="ligne"><dt>Source officielle</dt><dd>Avis publié au BOAMP<br>
+          <span class="sec">Dossier de consultation disponible sur le profil acheteur</span></dd></div>
+        <div class="ligne"><dt>À vérifier</dt><dd>Allotissement, capacités exigées, pièces
+          demandées, date et heure exactes de remise</dd></div>
+      </dl>
+      <div class="fiche-pied">
+        <p>Une fiche Kadanz est un relevé d'informations publiques, pas un conseil juridique.
+          C'est l'avis officiel qui fait foi, en particulier pour la date et l'heure de remise.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="etiquette">Pourquoi Kadanz</p>
+    <h2>Une petite entreprise ne devrait pas avoir à surveiller des plateformes.</h2>
+    <div class="portrait">
+      <p class="nom">Je suis Marvyn Gommard.</p>
+      <p>Je développe Kadanz autour d'une idée simple : une petite entreprise ne devrait pas
+        devoir passer des heures sur plusieurs plateformes pour découvrir qu'un marché
+        intéressant vient d'être publié dans son secteur.</p>
+      <p>Les marchés publics sont entièrement publics et gratuits d'accès. Le problème n'est pas
+        l'accès, c'est le volume : personne n'a le temps de lire des milliers d'avis pour
+        trouver les deux ou trois qui le concernent. Les outils capables de faire ce tri
+        existent, mais ils sont pensés pour des structures qui disposent d'un service dédié aux
+        appels d'offres. Beaucoup d'artisans et de PME passent donc à côté de marchés qu'ils
+        auraient pu décrocher.</p>
+      <p>Kadanz fait ce tri en amont : repérer les opportunités, éliminer le bruit, et signaler
+        celles qui méritent réellement votre attention.</p>
+      <p>Le service démarre. Je préfère l'écrire plutôt que d'afficher des références que je
+        n'ai pas encore.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="etiquette">Contact</p>
+    <h2>Une question, ou envie d'en savoir plus ?</h2>
+    <p>Dites-moi votre métier et vos zones d'intervention, et je vous indiquerai ce qui est
+      actuellement ouvert chez vous.</p>
+    <div class="contact-bloc">
+      <div class="nom">Marvyn Gommard</div>
+      <div class="marque">KADANZ</div>
+      <div class="role">Veille d'opportunités pour artisans &amp; PME</div>
+      <div><a href="mailto:marvyn@kadanz.fr">marvyn@kadanz.fr</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Kadanz est un service indépendant de veille.</strong> Les informations relatives
+      aux marchés proviennent de sources publiques officielles. Kadanz n'est ni un acheteur
+      public, ni une plateforme officielle de marchés publics, et ne garantit pas l'attribution
+      d'un marché.</p>
+    <p><strong>Éditeur.</strong> Kadanz — service opéré par Marvyn Gommard, en France.
+      Activité en phase de lancement. Contact :
+      <a href="mailto:marvyn@kadanz.fr">marvyn@kadanz.fr</a>.
+      Hébergement : GitHub Pages, GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco,
+      CA 94107, États-Unis.</p>
+    <p><strong>Données personnelles.</strong> Les entreprises contactées le sont à partir du
+      répertoire public des entreprises et de leurs pages publiques, sur la base de l'intérêt
+      légitime (article 6.1.f du RGPD), pour un objet en rapport direct avec leur activité.
+      Seules des adresses professionnelles publiées sont utilisées. Pour ne plus être
+      contacté, il suffit de répondre « stop » : la demande est appliquée immédiatement et sans
+      justification. Vous pouvez demander l'accès, la rectification ou l'effacement de vos
+      données à l'adresse de contact ci-dessus.</p>
+  </div>
+</footer>
+
 </body>
 </html>
