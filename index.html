@@ -108,7 +108,7 @@ section[id]{scroll-margin-top:92px}
 .support strong{font-weight:600}
 .hero-actions{display:flex;flex-direction:column;align-items:flex-start;gap:16px}
 .hint{font-size:14px;color:var(--gris)}
-@media(min-width:700px){.nb{display:inline}}
+@media(min-width:700px){.nb{display:inline}.nbm{display:none}}
 @media(min-width:860px){
   .hero{padding:92px 0 100px}
   .hero-grid{grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:72px;align-items:center}
@@ -208,6 +208,12 @@ footer{border-top:1px solid var(--ligne);background:var(--creme);padding:40px 0 
 .footer-legal p{margin:0;max-width:62em}
 .footer-legal strong{color:var(--anthracite);font-weight:600}
 @media(min-width:860px){.footer-legal{grid-template-columns:repeat(3,1fr);gap:40px}.footer-legal p{max-width:none}}
+
+/* ── polish mobile (<=560px) : header + H1 ─────────────── */
+@media(max-width:560px){
+  .nav-cta{padding:8px 15px;font-size:.85rem}
+  h1{font-size:clamp(2.6rem, 1.4rem + 5.2vw, 2.85rem);line-height:1.1}
+}
 </style>
 </head>
 <body>
@@ -240,7 +246,7 @@ footer{border-top:1px solid var(--ligne);background:var(--creme);padding:40px 0 
   <div class="shell hero-grid">
     <div class="hero-col">
       <p class="overline">Veille de marchés publics</p>
-      <h1>Les marchés qui méritent <br class="nb">votre attention.</h1>
+      <h1>Les marchés qui <br class="nbm">méritent <br class="nb">votre attention.</h1>
       <p class="lead">Kadanz repère les marchés publics qui correspondent réellement à votre
         activité, votre métier et votre zone d'intervention.</p>
       <p class="support">Vous ne passez plus votre temps à chercher.<br>
